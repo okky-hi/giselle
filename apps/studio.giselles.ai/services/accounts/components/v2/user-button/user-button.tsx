@@ -12,6 +12,7 @@ import Avatar from "boring-avatars";
 import Link from "next/link";
 import type { FC } from "react";
 import { SignOutButton } from "../../v2/user-button/sign-out-button";
+import TeamCreation from "@/services/teams/components/v2/team-creation";
 
 export const UserButton: FC = async () => {
 	const user = await getUser();
@@ -47,6 +48,9 @@ export const UserButton: FC = async () => {
 					>
 						Account Settings
 					</Link>
+				</DropdownMenuItem>
+				<DropdownMenuItem className="p-0 rounded-[8px] focus:bg-primary-900/50">
+					<TeamCreation />
 				</DropdownMenuItem>
 				<DropdownMenuSeparator className="-mx-2 my-0 p-0 bg-black-400" />
 				<div>
