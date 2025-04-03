@@ -71,7 +71,9 @@ export function EditableText({
 				onClick={() => setEdit(true)}
 			>
 				{value ?? fallbackValue}
-				{widthIcon && <Pen aria-label="edit" className="shrink-0 size-4" />}
+				{widthIcon && (
+					<Pen aria-label="Edit name" className="shrink-0 size-4" />
+				)}
 			</button>
 		</>
 	);
